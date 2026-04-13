@@ -1,0 +1,99 @@
+{
+  "case_name": "macOS Insider Data Exfiltration",
+  "required_fields": [
+    "q1_relevant_directory",
+    "q2_relevant_files",
+    "q3_staging_directory",
+    "q4_staging_evidence",
+    "q5_application_used",
+    "q6_external_service",
+    "q7_multiple_accounts_artifacts",
+    "q8_sequence_of_actions"
+  ],
+  "validators": {
+    "q1_relevant_directory": {
+      "type": "exact_path",
+      "expected": "/Users/jwang/Projects/internal-tools"
+    },
+    "q2_relevant_files": {
+      "type": "exact_set",
+      "expected": [
+        "api_keys.txt",
+        "customer_data.csv",
+        "internal_roadmap.pdf"
+      ]
+    },
+    "q3_staging_directory": {
+      "type": "exact_path",
+      "expected": "/Users/jwang/Documents/archive"
+    },
+    "q4_staging_evidence": {
+      "type": "keyword_text",
+      "required_groups": {
+        "duplication_or_copying": [
+          "copied",
+          "copy",
+          "duplicate",
+          "duplicated",
+          "same files"
+        ],
+        "original_location": [
+          "internal-tools",
+          "original directory"
+        ],
+        "staging_location": [
+          "archive",
+          "staging directory"
+        ]
+      }
+    },
+    "q5_application_used": {
+      "type": "keyword_list",
+      "keywords": [
+        "google chrome",
+        "chrome"
+      ]
+    },
+    "q6_external_service": {
+      "type": "keyword_list",
+      "keywords": [
+        "google drive",
+        "drive"
+      ]
+    },
+    "q7_multiple_accounts_artifacts": {
+      "type": "keyword_list",
+      "keywords": [
+        "chrome_history.csv",
+        "cookies.csv",
+        "chrome history",
+        "cookies"
+      ]
+    },
+    "q8_sequence_of_actions": {
+      "type": "sequence",
+      "required_groups": {
+        "local_activity": [
+          "internal-tools",
+          "internal files",
+          "files",
+          "sensitive files"
+        ],
+        "staging_activity": [
+          "archive",
+          "copied",
+          "copy",
+          "staged",
+          "duplicate"
+        ],
+        "external_activity": [
+          "google drive",
+          "drive",
+          "browser",
+          "chrome",
+          "external service"
+        ]
+      }
+    }
+  }
+}

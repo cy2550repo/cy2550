@@ -1,0 +1,16 @@
+# ALP Internal API Keys
+# DO NOT SHARE OUTSIDE ORGANIZATION
+
+[production]
+service_name=alp-core-api
+api_key=sk_live_9d8f7a6b5c4d3e2f1a
+region=us-east-1
+
+[staging]
+service_name=alp-core-api-staging
+api_key=sk_test_1a2b3c4d5e6f7g8h9i
+region=us-west-2
+
+# Notes:
+# - Rotate production keys every 90 days
+# - Do not store keys in public repositories

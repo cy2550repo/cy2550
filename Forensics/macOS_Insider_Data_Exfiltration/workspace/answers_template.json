@@ -1,0 +1,17 @@
+{
+  "_instructions": [
+    "Complete each field using only the provided evidence.",
+    "Use exact file names, paths, and values when the evidence supports them.",
+    "Copy this file to workspace/answers.json before running validation.",
+    "Do not include assumptions that are not supported by the artifacts.",
+    "Use workspace/README.md for guidance and formatting examples."
+  ],
+  "q1_relevant_directory": "",
+  "q2_relevant_files": [],
+  "q3_staging_directory": "",
+  "q4_staging_evidence": "",
+  "q5_application_used": "",
+  "q6_external_service": "",
+  "q7_multiple_accounts_artifacts": [],
+  "q8_sequence_of_actions": ""
+}

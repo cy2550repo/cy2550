@@ -1,0 +1,6 @@
+customer_id,company_name,plan_type,contact_email,account_status,internal_notes
+1001,BluePeak Analytics,Enterprise,admin@bluepeak.com,active,High-value client - priority support
+1002,NorthGrid Systems,Pro,ops@northgrid.io,active,Recently upgraded plan
+1003,Skyline Retail,Enterprise,it@skyline-retail.com,active,Pending feature request review
+1004,DeltaWare Inc,Basic,contact@deltaware.com,inactive,Churn risk flagged
+1005,Vertex Dynamics,Enterprise,security@vertexdyn.com,active,Security audit scheduled Q2
